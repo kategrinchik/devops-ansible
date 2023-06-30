@@ -1,0 +1,10 @@
+---
+clickhouse_version: "22.3.3.44"
+clickhouse_packages:
+  - clickhouse-client
+  - clickhouse-server
+  - clickhouse-common-static
+
+vector_version: "0.30.0"
+vector_home: /prod/vector
+  - vector
