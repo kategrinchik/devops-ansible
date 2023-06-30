@@ -1,2 +1,2 @@
-# devops_ansible
+# devops-ansible
 Repository was created for mnt homeworks allocation
