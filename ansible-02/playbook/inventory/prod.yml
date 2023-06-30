@@ -6,8 +6,3 @@ clickhouse:
       ansible_connection: ssh
       ansible_user: test
       ansible_ssh_private_key_file: ~/.ssh/id_ed25519
-#    vector-01:
-#      ansible_host: 10.211.55.16
-#      ansible_connection: ssh
-#      ansible_user: test
-#      ansible_ssh_private_key_file: ~/.ssh/id_ed25519
