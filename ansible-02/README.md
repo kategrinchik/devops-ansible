@@ -65,10 +65,10 @@ PLAY RECAP *********************************************************************
 clickhouse-01              : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
 ```  
   
-1. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev).
-2. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
-3. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
-4. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
+2. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает [vector](https://vector.dev).
+3. При создании tasks рекомендую использовать модули: `get_url`, `template`, `unarchive`, `file`.
+4. Tasks должны: скачать дистрибутив нужной версии, выполнить распаковку в выбранную директорию, установить vector.
+5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
   
 ```Ruby
  ⚡ root@parallels-Parallels-Virtual-Platform  ~/ans/02/playbook   main  ansible-lint site.yml 
@@ -77,7 +77,7 @@ WARNING  Overriding detected file kind 'yaml' with 'playbook' for given position
   
 Данный warning по информации от Ansible не требует никаких действий.  
   
-5. Попробуйте запустить playbook на этом окружении с флагом `--check`.  
+6. Попробуйте запустить playbook на этом окружении с флагом `--check`.  
   
 ```Ruby
 TASK [Install Vector] *************************************************************************************************************
@@ -128,7 +128,7 @@ clickhouse-01              : ok=6    changed=2    unreachable=0    failed=1    s
   
 Во время --check папка не создается.  
   
-6. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.  
+7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.  
   
 ```Ruby
 ✘ ⚡ root@parallels-Parallels-Virtual-Platform  ~/ans/02/playbook   main  ansible-playbook -i inventory/prod.yml site.yml --diff
@@ -214,7 +214,7 @@ PLAY RECAP *********************************************************************
 clickhouse-01              : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-7. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.  
+8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.  
   
 Повторный запуск с флагом --diff не показывает изменений:
   
@@ -253,10 +253,10 @@ PLAY RECAP *********************************************************************
 clickhouse-01              : ok=8    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
   
-8.  Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
+9.  Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
 
 [README.md](https://github.com/kategrinchik/devops-ansible/blob/main/ansible-02/playbook/README.md)  
   
-9.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.  
+10.  Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.  
   
 [ansible-02](https://github.com/kategrinchik/devops-ansible/tree/main/ansible-02)
