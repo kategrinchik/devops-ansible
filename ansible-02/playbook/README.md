@@ -12,7 +12,7 @@ Playbook предназначен для установки clickhouse и vector
 
 #### Теги playbook
 Для clickhouse и vector прописаны парные теги, позволяющие:
-- запускать только таски, связанные с clickhouse или vector (tags clickhouse/vector)
-- запускать только таски, связанные с загрузкой или установкой (tags distrib/install)
-- запускать отдельно таск с созданием DB clickhouse (tag db_create)
-- задавать переменные окружения для vector (tag set_env)
+- запускать только таски, связанные с clickhouse или vector (tags clickhouse/vector);
+- запускать только таски, связанные с загрузкой или установкой (tags distrib/install);
+- запускать отдельно таск с созданием DB clickhouse (tag db_create);
+- задавать переменные окружения для vector (tag set_env).
